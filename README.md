@@ -1,7 +1,79 @@
-usuario admin para pruebas :
-    name: root
-    email address: root@admin.com
-    ps: root
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Citec App
+
+Este proyecto es una aplicación desarrollada con Laravel y Filament. Sigue los pasos a continuación para descargar y configurar el proyecto.
+
+## Requisitos
+
+Antes de comenzar, asegúrate de tener lo siguiente instalado en tu entorno de desarrollo:
+
+- PHP >= 8.1
+- Composer
+- Git
+- Las siguientes extensiones de PHP deben estar habilitadas en tu archivo `php.ini`:
+  - `sqlite3`
+  - `zip`
+  - `pdo_sqlite`
+  - `intl`
+  - `fileinfo`
+  - `curl`
+  - `openssl`
+  - `mbstring`
+
+## Instalación
+
+1. **Clona el repositorio desde GitHub:**
+
+   ```bash
+   git clone https://github.com/juanfernandojfc/citec-app.git
+   cd citec-app
+2. **Instala las dependencias del proyecto utilizando Composer:**
+
+    composer install
+
+3. **Configura el entorno:**
+    Copia el archivo .env.example a .env y modifica las configuraciones según tu entorno local.
+
+    cp .env.example .env 
+
+    ó en windows 
+
+    copy .env.example .env
+
+4. **Genera la clave de la aplicación:**
+
+    php artisan key:generate
+
+5. **Ejecuta las migraciones de la base de datos:**
+
+    php artisan migrate
+
+    puede requerir que crees la base de datos selecciona la opcion [yes]
+
+6. **Levanta el servidor local de desarrollo:**
+
+    php artisan serve
+
+**SI TODO SALE BIEN VERAS UN MENSAJE EN CONSOLA ASI:**
+
+   INFO  Server running on [http://127.0.0.1:8000].
+
+   Press Ctrl+C to stop the server..
+
+**Acceso PANEL ADMINISTRATIVO FILAMENT**
+Para acceder a la aplicación, usa el siguiente usuario de ejemplo:
+
+Correo electrónico: test@example.com
+Contraseña: paassword
+
+¡Y eso es todo! Ahora puedes empezar a explorar la aplicación en tu entorno local.
+
+**Notas adicionales**
+Si experimentas problemas al instalar las dependencias o al ejecutar las migraciones, revisa que las extensiones mencionadas anteriormente estén habilitadas en tu archivo php.ini.
+
+Si estás utilizando PHP en Windows, es posible que necesites modificar el archivo php.ini para habilitar las siguientes extensiones: sqlite3, zip, pdo_sqlite, intl, fileinfo, curl, openssl, y mbstring.
+
+Puedes habilitar las extensiones necesarias editando el archivo php.ini como administrador y descomentando (eliminando ;) las líneas correspondientes.
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
