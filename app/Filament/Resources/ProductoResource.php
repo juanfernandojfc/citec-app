@@ -10,6 +10,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -24,10 +25,10 @@ class ProductoResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('Nombre')->required()->maxLength(50),
-                TextInput::make('Descripcion')->required()->maxLength(100),
-                TextInput::make('Precio')->numeric()->inputMode('decimal')->required()->maxLength(100),
-                TextInput::make('Stock')->integer()->required()->maxLength(100),
+                TextInput::make('nombre')->label('Nombre')->required()->maxLength(50),
+                TextInput::make('descripcion')->label('Descripcion')->required()->maxLength(100),
+                TextInput::make('precio')->label('Precio')->numeric()->inputMode('decimal')->required()->maxLength(100),
+                TextInput::make('stock')->label('Stock')->integer()->required()->maxLength(100),
             ]);
     }
 
@@ -35,7 +36,10 @@ class ProductoResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('nombre')->searchable(true),
+                TextColumn::make('descripcion')->searchable(true),
+                TextColumn::make('precio')->sortable(true),
+                TextColumn::make('stock')->sortable(true),
             ])
             ->filters([
                 //
