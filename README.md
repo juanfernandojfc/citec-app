@@ -50,6 +50,15 @@ Antes de comenzar, asegúrate de tener lo siguiente instalado en tu entorno de d
 
     puede requerir que crees la base de datos selecciona la opcion [yes]
 
+5.1 **Instala paquetes necesarios**
+    necesitaras ejecutar los siguientes 3 comandos 
+
+    npm install 
+
+    npm run build
+
+    php artisan migrate:refresh --seed
+
 6. **Levanta el servidor local de desarrollo:**
 
     php artisan serve
@@ -61,12 +70,17 @@ Antes de comenzar, asegúrate de tener lo siguiente instalado en tu entorno de d
    Press Ctrl+C to stop the server..
 
 **Acceso PANEL ADMINISTRATIVO FILAMENT**
-Para acceder a la aplicación, usa el siguiente usuario de ejemplo:
+Para acceder a la aplicación: 
+
+selecciona login
+luego debajo del formluario hay un boton que dice "admin" el cual te guia al login de admins, usa el siguiente usuario de ejemplo:
 
 Correo electrónico: test@example.com
 Contraseña: paassword
 
 ¡Y eso es todo! Ahora puedes empezar a explorar la aplicación en tu entorno local.
+
+dirigete a la pestaña "productos" para realizar operaciones CRUD sobre la base de datos
 
 **Notas adicionales**
 Si experimentas problemas al instalar las dependencias o al ejecutar las migraciones, revisa que las extensiones mencionadas anteriormente estén habilitadas en tu archivo php.ini.
